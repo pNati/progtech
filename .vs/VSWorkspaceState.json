@@ -3,8 +3,13 @@
     "",
     "\\Assets",
     "\\Commands.cs",
-    "\\Resources"
+    "\\Data management",
+    "\\Models",
+    "\\Resources",
+    "\\Services",
+    "\\Views",
+    "\\ViewsModels"
   ],
-  "SelectedNode": "\\Tests",
+  "SelectedNode": "\\App.xaml",
   "PreviewInSolutionExplorer": false
 }
