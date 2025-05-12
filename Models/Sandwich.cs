@@ -1,6 +1,6 @@
 namespace WpfBurgerApp.Models
 {
-    public abstract class Sandwich
+    public class Sandwich
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using WpfBurgerApp.Models;
 
 namespace WpfBurgerApp.Data

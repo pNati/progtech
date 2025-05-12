@@ -1,9 +1,10 @@
+﻿
 using System.ComponentModel;
 using System.Windows.Input;
-using WpfBurgerApp.Services;
 using WpfBurgerApp.Commands;
+using WpfBurgerApp.Services;
 
-namespace WpfBurgerApp.ViewModels
+namespace WpfBurgerApp.ViewsModels
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
