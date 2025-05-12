@@ -1,6 +1,20 @@
-public class LoginViewModel : INotifyPropertyChanged
+using System.ComponentModel;
+using System.Windows.Input;
+using WpfBurgerApp.Services;
+using WpfBurgerApp.Commands;
+
+namespace WpfBurgerApp.ViewModels
 {
-    public string Username { get; set; }
-    public string Password { get; set; }
-    public ICommand LoginCommand { get; set; }
+    public class LoginViewModel : INotifyPropertyChanged
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public ICommand LoginCommand { get; }
+
+        public LoginViewModel(AuthService auth)
+        {
+            LoginCommand = new RelayCommand(_ => auth.Authenticate(Username, Password));
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
+    }
 }

@@ -1,15 +1,18 @@
-public class AuthService
+using System.Linq;
+using WpfBurgerApp.Data;
+using BCrypt.Net;
+
+namespace WpfBurgerApp.Services
 {
-    private readonly AppDbContext _context;
-
-    public AuthService(AppDbContext context)
+    public class AuthService
     {
-        _context = context;
-    }
+        private readonly UserRepository _userRepo;
+        public AuthService(UserRepository repo) => _userRepo = repo;
 
-    public bool Authenticate(string username, string password)
-    {
-        var user = _context.Users.SingleOrDefault(u => u.Username == username);
-        return user != null && BCrypt.Net.BCrypt.Verify(password, user.PasswordHash);
+        public bool Authenticate(string username, string password)
+        {
+            var user = _userRepo.GetByUsername(username);
+            return user != null && BCrypt.Verify(password, user.PasswordHash);
+        }
     }
 }
