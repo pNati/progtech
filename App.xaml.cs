@@ -1,5 +1,6 @@
 using System.Windows;
 using WpfBurgerApp.Data;
+using WpfBurgerApp.Models;
 using WpfBurgerApp.Views;
 
 namespace WpfBurgerApp
@@ -15,7 +16,10 @@ namespace WpfBurgerApp
             using (var db = new AppDbContext())
             {
                 db.Database.EnsureCreated();
+
             }
+
+
         }
     }
 

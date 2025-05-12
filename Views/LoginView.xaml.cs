@@ -31,5 +31,13 @@ namespace WpfBurgerApp.Views
             var userRepo = new UserRepository(dbContext);
             DataContext = new LoginViewModel(new AuthService(userRepo));
         }
+
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is LoginViewModel vm)
+            {
+                vm.Password = ((PasswordBox)sender).Password;
+            }
+        }
     }
 }
