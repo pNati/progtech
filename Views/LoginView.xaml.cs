@@ -26,10 +26,11 @@ namespace WpfBurgerApp.Views
     {
         public LoginView()
         {
+            var regView = new RegisterView();
             InitializeComponent();
             var dbContext = new AppDbContext();
             var userRepo = new UserRepository(dbContext);
-            DataContext = new LoginViewModel(new AuthService(userRepo));
+            DataContext = new LoginViewModel(new AuthService(userRepo), OpenRegister, OpenStartView);
         }
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
@@ -38,6 +39,19 @@ namespace WpfBurgerApp.Views
             {
                 vm.Password = ((PasswordBox)sender).Password;
             }
+        }
+
+        private void OpenRegister()
+        {
+            var regWindow = new RegisterView();
+            regWindow.Show();
+            this.Close();
+        }
+
+        private void OpenStartView() {
+            var startWindow = new StartView();
+            startWindow.Show();
+            this.Close();
         }
     }
 }

@@ -1,21 +1,9 @@
-<<<<<<< HEAD
 ï»¿<Window x:Class="WpfBurgerApp.Views.BurgerSize"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfBurgerApp.Views"
-        mc:Ignorable="d"
-        Title="BurgerSize" Height="450" Width="800">
-    <Grid>
-        
-=======
-<Window x:Class="WpfBurgerApp.Views.BurgerSize"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Méret választás" Height="200" Width="300">
+        Title="MÃ©ret vÃ¡lasztÃ¡s" Height="200" Width="300">
     <Grid Margin="20">
-        <Button Content="Vissza a fõoldalra"
+        <Button Content="Vissza a fÅ‘oldalra"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Margin="-6,0,0,-8"
@@ -35,7 +23,7 @@
                 <Button Width="75" Height="97" Margin="5" Click="Medium_Click">
                     <StackPanel>
                         <Image Source="../Images/mediumburger.png" Width="40" Height="40" />
-                        <TextBlock Text="Közepes" HorizontalAlignment="Center" />
+                        <TextBlock Text="KÃ¶zepes" HorizontalAlignment="Center" />
                     </StackPanel>
                 </Button>
 
@@ -48,6 +36,5 @@
 
             </StackPanel>
         </StackPanel>
->>>>>>> aa66f247459e496d530d9161059887b74802c807
     </Grid>
 </Window>

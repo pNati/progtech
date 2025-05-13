@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,18 +20,6 @@ namespace WpfBurgerApp.Views
     public partial class BurgerSize : Window
     {
         public BurgerSize()
-=======
-﻿using System.Windows;
-using WpfBurgerApp.Views;
-
-namespace WpfBurgerApp.Views
-{
-    public partial class BurgerSize : Window
-    {
-        public BurgerSize() => InitializeComponent();
-
-        private void InitializeComponent()
->>>>>>> aa66f247459e496d530d9161059887b74802c807
         {
             InitializeComponent();
         }

@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using WpfBurgerApp.WpfBurgerApp;
+using WpfBurgerApp;
 
 namespace WpfBurgerApp.Views
 {
