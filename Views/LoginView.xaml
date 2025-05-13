@@ -1,12 +1,16 @@
 ﻿<Window x:Class="WpfBurgerApp.Views.LoginView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Login" Height="200" Width="300">
-    <Grid Margin="20">
+        Title="Login" Height="400" Width="400" BorderBrush="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}">
+    <Grid Margin="60 30 60 30">
         <StackPanel>
-            <TextBox Text="{Binding Username}" />
-            <PasswordBox PasswordChar="*" PasswordChanged="PasswordBox_PasswordChanged" />
-            <Button Content="Login" Command="{Binding LoginCommand}" />
+            <Label Padding="0" Margin="0 40 0 40" Content="BurgerApp" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <Label Padding="0 0 0 0" Content="Felhasználónév:"/>
+            <TextBox Margin="0 0 0 10" Text="{Binding Username}" Height="25" />
+            
+            <Label Padding="0 0 0 0" Content="Jelszó:"/>
+            <PasswordBox Margin="0 0 0 10" Height="25" PasswordChar="*" PasswordChanged="PasswordBox_PasswordChanged" />
+            <Button Margin="0 10 0 0" Content="Bejelentkezés" Command="{Binding LoginCommand}" Height="36" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
         </StackPanel>
     </Grid>
 </Window>

@@ -1,7 +1,7 @@
 <Window x:Class="WpfBurgerApp.Views.Meal"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Húsos ételek" Height="200" Width="300">
+        Title="Husos etelek" Height="200" Width="300">
     <Grid Margin="20">
         <Button Content="Vissza a fõoldalra"
                 HorizontalAlignment="Left"
