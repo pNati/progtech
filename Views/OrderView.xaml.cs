@@ -24,5 +24,10 @@ namespace WpfBurgerApp.Views
         {
             InitializeComponent();
         }
+
+        internal void Show()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
