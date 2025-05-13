@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace WpfBurgerApp
 {
-
-        namespace WpfBurgerApp
-    {
+   
         public static class AppState
         {
-            public static string SelectedMeat { get; set; }
+            public static string SelectedSize { get; set; }
+            public static string SelectedMeat { get; set; } 
         }
-    }
+    
+
 
 }
