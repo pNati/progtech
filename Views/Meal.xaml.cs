@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using WpfBurgerApp.WpfBurgerApp;
 
 namespace WpfBurgerApp.Views
 {
@@ -14,20 +15,28 @@ namespace WpfBurgerApp.Views
 
         private void Chicken_Click(object sender, RoutedEventArgs e)
         {
-            selectedMeat = "Csirke";
-            MessageBox.Show($"Kiválasztva: {selectedMeat}");
+            AppState.SelectedMeat = "Csirke";
+            OpenBurgerSizeWindow();
         }
 
         private void Beef_Click(object sender, RoutedEventArgs e)
         {
-            selectedMeat = "Marha";
-            MessageBox.Show($"Kiválasztva: {selectedMeat}");
+            AppState.SelectedMeat = "Marha";
+            OpenBurgerSizeWindow();
         }
 
         private void Pork_Click(object sender, RoutedEventArgs e)
         {
-            selectedMeat = "Sertés";
-            MessageBox.Show($"Kiválasztva: {selectedMeat}");
+            AppState.SelectedMeat = "Sertés";
+            OpenBurgerSizeWindow();
+        }
+
+
+        private void OpenBurgerSizeWindow()
+        {
+            BurgerSize burgerSizeWindow = new BurgerSize();
+            burgerSizeWindow.Show();
+            this.Close();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

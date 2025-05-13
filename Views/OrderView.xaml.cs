@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfBurgerApp.WpfBurgerApp;
 
 namespace WpfBurgerApp.Views
 {
@@ -20,6 +21,9 @@ namespace WpfBurgerApp.Views
     /// </summary>
     public partial class OrderView : Page
     {
+        string selected = AppState.SelectedMeat;
+        // pl.: MessageBox.Show("Kiválasztott hús: " + selected);
+
         public OrderView()
         {
             InitializeComponent();
