@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,53 @@ namespace WpfBurgerApp.Views
     public partial class BurgerSize : Window
     {
         public BurgerSize()
+=======
+﻿using System.Windows;
+using WpfBurgerApp.Views;
+
+namespace WpfBurgerApp.Views
+{
+    public partial class BurgerSize : Window
+    {
+        public BurgerSize() => InitializeComponent();
+
+        private void InitializeComponent()
+>>>>>>> aa66f247459e496d530d9161059887b74802c807
         {
             InitializeComponent();
+        }
+
+        private void Small_Click(object sender, RoutedEventArgs e)
+        {
+            AppState.SelectedSize = "Kicsi";
+            NavigateToDrink();
+        }
+
+        private void Medium_Click(object sender, RoutedEventArgs e)
+        {
+            AppState.SelectedSize = "Közepes";
+            NavigateToDrink();
+        }
+
+        private void Large_Click(object sender, RoutedEventArgs e)
+        {
+            AppState.SelectedSize = "Nagy";
+            NavigateToDrink();
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Itt betöltjük a főoldalt (StartView) új ablakban
+            var startWindow = new StartView();
+            startWindow.Show();
+            this.Close(); // Bezárjuk a jelenlegi ablakot
+        }
+
+        private void NavigateToDrink()
+        {
+            Drink drinkWindow = new Drink();
+            drinkWindow.Show();
+            this.Close();
         }
     }
 }

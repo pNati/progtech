@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ï»¿<Window x:Class="WpfBurgerApp.Views.BurgerSize"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -8,5 +9,45 @@
         Title="BurgerSize" Height="450" Width="800">
     <Grid>
         
+=======
+<Window x:Class="WpfBurgerApp.Views.BurgerSize"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Méret választás" Height="200" Width="300">
+    <Grid Margin="20">
+        <Button Content="Vissza a fõoldalra"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="-6,0,0,-8"
+                Click="BackButton_Click"
+                Width="106" />
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+
+                <Button Width="75" Height="97" Margin="5" Click="Small_Click">
+                    <StackPanel>
+                        <Image Source="../Images/smallburger.png" Width="40" Height="40" />
+                        <TextBlock Text="Kicsi" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+                <Button Width="75" Height="97" Margin="5" Click="Medium_Click">
+                    <StackPanel>
+                        <Image Source="../Images/mediumburger.png" Width="40" Height="40" />
+                        <TextBlock Text="Közepes" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+                <Button Width="75" Height="97" Margin="5" Click="Large_Click">
+                    <StackPanel>
+                        <Image Source="../Images/bigburger.png" Width="40" Height="40" />
+                        <TextBlock Text="Nagy" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+        </StackPanel>
+>>>>>>> aa66f247459e496d530d9161059887b74802c807
     </Grid>
 </Window>
