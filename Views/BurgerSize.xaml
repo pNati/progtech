@@ -8,6 +8,7 @@
                 VerticalAlignment="Bottom"
                 Margin="-6,0,0,-8"
                 Click="BackButton_Click"
+                Background="Aquamarine"
                 Width="106" />
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -24,12 +25,8 @@
                 <Button Width="75" Height="97" Margin="5" Click="Medium_Click">
                     <StackPanel>
                         <Image Source="../Images/mediumburger.png" Width="40" Height="40" />
-<<<<<<< HEAD
-                        <TextBlock Text="Közepes" HorizontalAlignment="Center" />
-                        <TextBlock Text="1500Ft" HorizontalAlignment="Center"/>
-=======
                         <TextBlock Text="KÃ¶zepes" HorizontalAlignment="Center" />
->>>>>>> c65bf630ff52c27b156adaaea2bfe1ccce070b00
+                        <TextBlock Text="1500Ft" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 

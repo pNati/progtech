@@ -9,6 +9,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Margin="10"
+                Background="Aquamarine"
                 Click="BackButton_Click"/>
 
 
