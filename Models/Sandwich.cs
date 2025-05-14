@@ -4,7 +4,6 @@ namespace WpfBurgerApp.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string ImagePath { get; set; }
         public decimal BasePrice { get; set; }
         public bool IsSpicy { get; set; }
         public string Size { get; set; }
@@ -14,8 +13,7 @@ namespace WpfBurgerApp.Models
     public class ChickenSandwich : Sandwich { public ChickenSandwich() => Name = "Csirke"; }
     public class PorkSandwich : Sandwich { public PorkSandwich() => Name = "Disznó"; }
     public class BeefSandwich : Sandwich { public BeefSandwich() => Name = "Marha"; }
-    public class VeganSpecialSandwich : VeggieSandwich { public VeganSpecialSandwich() => Name = "Vegán Special"; }
-    public class SaladSandwich : VeggieSandwich { public SaladSandwich() => Name = "Saláta Szendvics"; }
+    
 }
 
 

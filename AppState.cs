@@ -11,6 +11,12 @@ namespace WpfBurgerApp
         {
             public static string SelectedSize { get; set; }
             public static string SelectedMeat { get; set; } 
+
+             public static string SelectedDrink { get; set;} //át kell írni enumra ezeket TODO!!!
+
+             public static bool Dessert { get; set;}
+
+            public static string WhatDessert { get; set;}
         }
     
 

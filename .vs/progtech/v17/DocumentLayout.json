@@ -51,8 +51,7 @@
               "RelativeToolTip": "Views\\Meal.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T18:31:39.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T18:31:39.447Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Views\\VegaOrNot.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-13T18:19:15.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T18:19:15.622Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "Views\\Vega.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-13T18:17:58.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T18:17:58.382Z"
             }
           ]
         }

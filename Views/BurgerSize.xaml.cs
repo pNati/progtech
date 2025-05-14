@@ -5,12 +5,7 @@ namespace WpfBurgerApp.Views
 {
     public partial class BurgerSize : Window
     {
-        public BurgerSize() => InitializeComponent();
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
 
         private void Small_Click(object sender, RoutedEventArgs e)
         {
@@ -32,10 +27,10 @@ namespace WpfBurgerApp.Views
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            // Itt betöltjük a főoldalt (StartView) új ablakban
+            
             var startWindow = new StartView();
             startWindow.Show();
-            this.Close(); // Bezárjuk a jelenlegi ablakot
+            this.Close(); 
         }
 
         private void NavigateToDrink()

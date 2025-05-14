@@ -17,6 +17,7 @@
                     <StackPanel>
                         <Image Source="../Images/smallburger.png" Width="40" Height="40" />
                         <TextBlock Text="Kicsi" HorizontalAlignment="Center" />
+                        <TextBlock Text="1000Ft" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
@@ -24,6 +25,7 @@
                     <StackPanel>
                         <Image Source="../Images/mediumburger.png" Width="40" Height="40" />
                         <TextBlock Text="Közepes" HorizontalAlignment="Center" />
+                        <TextBlock Text="1500Ft" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
@@ -31,6 +33,7 @@
                     <StackPanel>
                         <Image Source="../Images/bigburger.png" Width="40" Height="40" />
                         <TextBlock Text="Nagy" HorizontalAlignment="Center" />
+                        <TextBlock Text="2500Ft" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
