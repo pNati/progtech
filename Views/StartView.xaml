@@ -1,9 +1,8 @@
-<Window x:Class="WpfBurgerApp.Views.StartView"
+ï»¿<Window x:Class="WpfBurgerApp.Views.StartView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Start" Height="200" Width="300">
     <Grid>
-        <Button Content="Kezdjük a rendelést!" Width="120" Height="50" Click="Kezdjuk_Click" 
-                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Content="KezdjÃ¼k a rendelÃ©st!" Width="120" Height="50" Click="Kezdjuk_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Window>

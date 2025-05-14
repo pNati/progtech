@@ -14,7 +14,17 @@ namespace WpfBurgerApp.Services
         public bool Authenticate(string username, string password)
         {
             var user = _userRepo.GetByUsername(username);
-            return user != null && BCrypt.Net.BCrypt.Verify(password, user.PasswordHash);
+            try
+            {
+                return user != null && BCrypt.Net.BCrypt.Verify(password, user.PasswordHash);
+            }
+            catch (Exception ex)
+            {
+                //MessageBox teszteléshez. Hogy ne fagyjon ki, a hibát kiíratjuk (catch-el).
+                MessageBox.Show(ex.Message);
+                
+                return false;
+            }
         }
     }
 }

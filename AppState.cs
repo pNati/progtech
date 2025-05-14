@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace WpfBurgerApp
 {
-   
         public static class AppState
         {
             public static string SelectedSize { get; set; }
@@ -18,7 +17,4 @@ namespace WpfBurgerApp
 
             public static string WhatDessert { get; set;}
         }
-    
-
-
 }
