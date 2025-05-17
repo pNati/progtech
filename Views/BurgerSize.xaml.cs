@@ -19,14 +19,12 @@ namespace WpfBurgerApp.Views
     /// </summary>
     public partial class BurgerSize : Window
     {
-<<<<<<< HEAD
 
-=======
         public BurgerSize()
         {
             InitializeComponent();
         }
->>>>>>> c65bf630ff52c27b156adaaea2bfe1ccce070b00
+
 
         private void Small_Click(object sender, RoutedEventArgs e)
         {

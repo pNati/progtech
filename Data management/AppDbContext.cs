@@ -11,6 +11,7 @@ namespace WpfBurgerApp.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
+            // Itt az SQLite adatbázis helyét és nevét
             options.UseSqlite("Data Source=wpfburgerapp.db");
         }
     }
