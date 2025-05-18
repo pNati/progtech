@@ -22,25 +22,27 @@ namespace WpfBurgerApp.Views
         }
         private void Pancakes_Click(object sender, RoutedEventArgs e)
         {
+            AppState.WhatDessert = "Palacsinta";
             var orderViewWindow = new OrderView();
             orderViewWindow.Show();
-            AppState.WhatDessert = "Pancakes";
-            this.Close(); ;
+            
+            this.Close();
         }
 
         private void Donut_Click(object sender, RoutedEventArgs e)
         {
+            AppState.WhatDessert = "Fánk";
             var orderViewWindow = new OrderView();
             orderViewWindow.Show();
-            AppState.WhatDessert = "Donut";
+           
             this.Close();
         }
 
         private void Icecream_Click(object sender, RoutedEventArgs e)
         {
+            AppState.WhatDessert = "Fagylalt";
             var orderViewWindow = new OrderView();
             orderViewWindow.Show();
-            AppState.WhatDessert = "Icecream";
             this.Close();
         }
 

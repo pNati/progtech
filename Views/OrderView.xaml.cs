@@ -21,15 +21,15 @@ namespace WpfBurgerApp.Views
             // Méret alapján ár
             switch (AppState.SelectedSize)
             {
-                case "Small":
+                case "Kicsi":
                     total += 1000;
                     summary += "Méret: Kicsi\n";
                     break;
-                case "Medium":
+                case "Közepes":
                     total += 1500;
                     summary += "Méret: Közepes\n";
                     break;
-                case "Large":
+                case "Nagy":
                     total += 2500;
                     summary += "Méret: Nagy\n";
                     break;
@@ -80,6 +80,11 @@ namespace WpfBurgerApp.Views
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             // nem szükséges semmi ide
+        }
+
+        private void ThankYou_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
