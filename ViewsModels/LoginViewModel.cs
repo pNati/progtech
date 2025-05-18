@@ -31,6 +31,7 @@ namespace WpfBurgerApp.ViewsModels
                     if (isAuth)
                     {
                         //Teszt fh: admin. jelszó: admin
+
                         MessageBox.Show("Sikeres belépés!");
                         nextView();
                     }

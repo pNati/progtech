@@ -15,7 +15,11 @@ namespace WpfBurgerApp.Services
             var user = _userRepo.GetByUsername(username);
             try
             {
-                return user != null && BCrypt.Net.BCrypt.Verify(password, user.PasswordHash);
+                if (user != null && BCrypt.Net.BCrypt.Verify(password, user.PasswordHash)) {
+                    AppState.User = user;
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {

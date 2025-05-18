@@ -10,6 +10,6 @@ namespace WpfBurgerApp.Data
 
         public void Add(Order order) { _context.Orders.Add(order); _context.SaveChanges(); }
         public void Remove(Order order) { _context.Orders.Remove(order); _context.SaveChanges(); }
-        public IQueryable<Order> GetAll() => _context.Orders.Include(o => o.Sandwich).Include(o => o.User);
+        //public IQueryable<Order> GetAll() => _context.Orders.Include(o => o.Sandwich).Include(o => o.User);
     }
 }

@@ -1,6 +1,13 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using WpfBurgerApp.Data;
+using WpfBurgerApp.Data_management;
+using WpfBurgerApp.Decorator;
+using WpfBurgerApp.Models;
+using WpfBurgerApp.Services;
+using WpfBurgerApp.ViewModels;
+using WpfBurgerApp.ViewsModels;
 
 namespace WpfBurgerApp.Views
 {
@@ -10,64 +17,65 @@ namespace WpfBurgerApp.Views
         {
             InitializeComponent();
             DisplayOrderSummary();
+            var dbContext = new AppDbContext();
+            var orderRepo = new OrderRepository(dbContext);
+            DataContext = new OrderViewModel(new OrderService(orderRepo), OpenThankView);
         }
 
         private void DisplayOrderSummary()
         {
+            AppState.Order = new Order();
+
             // Összeg kiszámítása
-            int total = 0;
-            string summary = "";
+            int sizePrice = 0;
 
             // Méret alapján ár
             switch (AppState.SelectedSize)
             {
                 case "Kicsi":
-                    total += 1000;
-                    summary += "Méret: Kicsi\n";
+                    sizePrice = 1000;
                     break;
                 case "Közepes":
-                    total += 1500;
-                    summary += "Méret: Közepes\n";
+                    sizePrice = 1500;
                     break;
                 case "Nagy":
-                    total += 2500;
-                    summary += "Méret: Nagy\n";
+                    sizePrice = 2500;
                     break;
             }
+            AppState.Order = new OrderItemDecorator(AppState.Order, $"Méret: {AppState.SelectedSize}", sizePrice);
 
             // Hús választás
             if (!string.IsNullOrEmpty(AppState.SelectedMeat))
-                summary += $"Hús: {AppState.SelectedMeat}\n";
+            {
+                AppState.Order = new OrderItemDecorator(AppState.Order, $"Hús: {AppState.SelectedMeat}", 0);
+            }
 
             // Ital választás
-            if (!string.IsNullOrEmpty(AppState.SelectedDrink))
-                summary += $"Ital: {AppState.SelectedDrink}\n";
+            if (!string.IsNullOrEmpty(AppState.SelectedDrink)) {
+                AppState.Order = new OrderItemDecorator(AppState.Order, $"Ital: {AppState.SelectedDrink}", 0);
+            }
 
+            int dessertPrice = 0;
             // Desszert választás
             if (AppState.Dessert)
             {
-                summary += $"Desszert: {AppState.WhatDessert}\n";
                 switch (AppState.WhatDessert)
                 {
                     case "Palacsinta":
-                        total += 800;
+                        dessertPrice = 800;
                         break;
                     case "Fánk":
-                        total += 500;
+                        dessertPrice = 500;
                         break;
                     case "Fagylalt":
-                        total += 700;
+                        dessertPrice = 700;
                         break;
                 }
-            }
-            else
-            {
-                summary += "Desszert: Nincs\n";
+                AppState.Order = new OrderItemDecorator(AppState.Order, $"Desszert: {AppState.WhatDessert}",dessertPrice);
             }
 
-            // Kiírás a TextBox-okba
-            OrderSummaryTextBox.Text = summary;
-            TotalTextBox.Text = $"Összeg: {total} Ft";
+            OrderSummaryTextBox.Text = AppState.Order.Data;
+            TotalTextBox.Text = $"Összeg: {AppState.Order.Total} Ft";
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -91,5 +99,13 @@ namespace WpfBurgerApp.Views
             payWindow.Show();
             this.Close();
         }
+        private void OpenThankView()
+        {
+            var loginWindow = new Thank();
+            loginWindow.Show();
+            this.Close();
+        }
     }
+
+  
 }
