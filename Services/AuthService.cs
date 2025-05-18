@@ -1,6 +1,5 @@
 using System.Linq;
 using WpfBurgerApp.Data;
-using BCrypt.Net;
 using WpfBurgerApp.Data_management;
 using System.Windows;
 

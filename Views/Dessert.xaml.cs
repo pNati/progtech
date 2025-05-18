@@ -7,8 +7,12 @@ using System.Windows;
 
 namespace WpfBurgerApp.Views
 {
-    internal partial class Dessert: Window
+    public partial class Dessert: Window
     {
+        public Dessert()
+        {
+            InitializeComponent();
+        }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {

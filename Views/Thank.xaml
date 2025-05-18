@@ -1,15 +1,15 @@
-<Page x:Class="WpfBurgerApp.Views.Thank"
+ï»¿<Window x:Class="WpfBurgerApp.Views.Thank"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      Title="Fizetés" Height="200" Width="300">
+        Title="FizetÃ©s" Height="200" Width="300">
 
     <Grid Margin="20">
 
 
 
-        <TextBox TextWrapping="Wrap" Text="Köszönjük, hogy minket választott!" TextChanged="TextBox_TextChanged" Margin="32,24,32,115"/>
-        <TextBox TextWrapping="Wrap" Text="Hamarosan átveheti a rendelését:" TextChanged="TextBox_TextChanged" Margin="32,45,32,94"/>
-        <Button Content="Új rendelés" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" Background="Gold" Click="New_Click"/>
+        <TextBox TextWrapping="Wrap" Text="KÃ¶szÃ¶njÃ¼k, hogy minket vÃ¡lasztott!" Margin="32,24,32,99"/>
+        <TextBox TextWrapping="Wrap" Text="Hamarosan Ã¡tveheti a rendelÃ©sÃ©t:" Margin="32,59,32,66"/>
+        <Button Content="Ãšj rendelÃ©s" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" Background="Gold" Click="New_Click"/>
 
     </Grid>
-</Page>
+</Window>

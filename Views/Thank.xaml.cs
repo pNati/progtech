@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace WpfBurgerApp.Views
 {
-    public partial class Thank: Window
+    public partial class Thank : Window
     {
         internal void Show() => throw new NotImplementedException();
 

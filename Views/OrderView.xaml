@@ -1,4 +1,4 @@
-﻿<Page x:Class="WpfBurgerApp.Views.OrderView"
+﻿<Window x:Class="WpfBurgerApp.Views.OrderView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Title="Fizetés" Height="200" Width="300">
@@ -40,4 +40,4 @@
                  Width="120"
                  IsReadOnly="True" />
     </Grid>
-</Page>
+</Window>

@@ -4,7 +4,7 @@ using System.Windows.Controls;
 
 namespace WpfBurgerApp.Views
 {
-    public partial class OrderView : Page
+    public partial class OrderView : Window
     {
         public OrderView()
         {

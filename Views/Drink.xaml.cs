@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-﻿using System.Windows;
-using WpfBurgerApp.Models; // a rendelési adatok tárolásához
-using WpfBurgerApp.Views;  // a következő ablakhoz
-
-namespace WpfBurgerApp.Views
-{
-=======
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,19 +11,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfBurgerApp.Models; // a rendelési adatok tárolásához
+using WpfBurgerApp.Views;  // a következő ablakhoz
 
 namespace WpfBurgerApp.Views
 {
     /// <summary>
     /// Interaction logic for Drink.xaml
     /// </summary>
->>>>>>> c65bf630ff52c27b156adaaea2bfe1ccce070b00
     public partial class Drink : Window
     {
         public Drink()
         {
             InitializeComponent();
-<<<<<<< HEAD
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -43,7 +35,7 @@ namespace WpfBurgerApp.Views
 
         private void Cola_Click(object sender, RoutedEventArgs e)
         {
-            AppState.SelectedDrink = "Cola"
+            AppState.SelectedDrink = "Cola";
             NavigateToDessert();
         }
 
@@ -59,13 +51,16 @@ namespace WpfBurgerApp.Views
             NavigateToDessert();
         }
 
+        private void Limonad_Click(object sender, RoutedEventArgs e) {
+            AppState.SelectedDrink = "Limonádé";
+            NavigateToDessert();
+        }
+
         private void NavigateToDessert()
         {
             var dessertOrNotWindow = new DessertOrNot();
             dessertOrNotWindow.Show();
             this.Close();
-=======
->>>>>>> c65bf630ff52c27b156adaaea2bfe1ccce070b00
         }
     }
 }
