@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WpfBurgerApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a12d31b7a96aa6fe16b1688600be3f6da5237b48")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cc2021789f2f5dd4e1473e234c7c3714099f288")]
 [assembly: System.Reflection.AssemblyProductAttribute("WpfBurgerApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WpfBurgerApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
