@@ -82,9 +82,14 @@ namespace WpfBurgerApp.Views
             // nem szükséges semmi ide
         }
 
-        private void ThankYou_Click(object sender, RoutedEventArgs e)
+        private void Pay_Click(object sender, RoutedEventArgs e)
         {
+            bool? isChecked = isTakeawayCheckbox.IsChecked;
 
+            AppState.isTakeaway = (bool)isChecked;
+            var payWindow = new Pay();
+            payWindow.Show();
+            this.Close();
         }
     }
 }

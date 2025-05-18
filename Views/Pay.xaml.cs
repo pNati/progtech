@@ -9,8 +9,14 @@ namespace WpfBurgerApp.Views
 {
     public partial class Pay : Window
     {
+        public Pay() 
+        {
+            InitializeComponent();
+        }
+
         private void Cash_Click(object sender, RoutedEventArgs e)
         { 
+            AppState.PaymentMethod = "Készpénz";
             Thank thankWindow = new Thank();
             thankWindow.Show();
             this.Close();
@@ -18,6 +24,7 @@ namespace WpfBurgerApp.Views
 
         private void Creditcard_Click(object sender, RoutedEventArgs e)
         {
+            AppState.PaymentMethod = "Kártya";
             Thank thankWindow = new Thank();
             thankWindow.Show();
             this.Close();

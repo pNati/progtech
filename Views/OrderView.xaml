@@ -32,10 +32,11 @@
                  Margin="0 20 0 20"
                  Height="25" FontSize="16" FontWeight="Bold"
             />
+            <CheckBox x:Name="isTakeawayCheckbox" Margin="0 0 0 20" Content="Elviteles?" />
             <Button Content="Fizetés"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Center"
-                Click="ThankYou_Click"
+                Click="Pay_Click"
                 Height="50" 
                 Background="Green"
                 />

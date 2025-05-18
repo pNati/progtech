@@ -9,7 +9,10 @@ namespace WpfBurgerApp.Views
 {
     public partial class Thank : Window
     {
-        internal void Show() => throw new NotImplementedException();
+        public Thank()
+        {
+            InitializeComponent();
+        }
 
         private void New_Click(object sender, EventArgs e)
         {
