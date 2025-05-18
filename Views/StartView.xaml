@@ -8,6 +8,7 @@
             <Label Padding="0" Margin="0 0 0 5" Content="BurgerApp" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"/>
             <Label Padding="0" Margin="0 0 0 40" Content="Készen állsz a rendelésre?" FontSize="12" HorizontalAlignment="Center" Foreground="{DynamicResource {x:Static SystemColors.InfoTextBrushKey}}" FontWeight="Medium"/>
             <Button Content="Kezdjük a rendelést!" Height="50" Click="Kezdjuk_Click" HorizontalAlignment="Stretch" Background="gold"/>
+            <Label x:Name="ordersCountLabel" Content="Rendelések száma: 0" HorizontalAlignment="Center" Margin="0 20 0 0"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -7,7 +7,9 @@ namespace WpfBurgerApp.Services
     {
         private readonly OrderRepository _orderRepo;
         public OrderService(OrderRepository repo) => _orderRepo = repo;
-        public void PlaceOrder(Order order) => _orderRepo.Add(order);
+        public Order? PlaceOrder(Order order) => _orderRepo.Add(order);
         public void CancelOrder(Order order) => _orderRepo.Remove(order);
+
+        public IQueryable<Order> GetAllOrder() => _orderRepo.GetAll();
     }
 }

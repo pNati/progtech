@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfBurgerApp.Models;
 
 namespace WpfBurgerApp.Decorator
 {
@@ -17,6 +18,7 @@ namespace WpfBurgerApp.Decorator
 
         public virtual string Data { get { return this.rendeles.Data; } }
         public virtual double Total { get { return this.rendeles.Total; } }
+        public Order GetBaseOrder() => rendeles.GetBaseOrder();
 
     }
 }

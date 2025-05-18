@@ -7,15 +7,16 @@ namespace WpfBurgerApp.Models
     {
         public int Id { get; set; }
         public int UserId { get; set; }
-        //public Sandwich Sandwich { get; set; }
-        //public string Size { get; set; }
         public bool IsTakeaway { get; set; }
         public DateTime OrderedAt { get; set; }
         public string Data { get { return ""; } }
         public double Total { get { return 0; } }
 
-        //public List<OrderItem> OrderItems { get; set; }
+        public Order GetBaseOrder() => this;
 
-        //public bool IsPaid { get; set; }
+        public override string ToString()
+        {
+            return $"Azonosító: { Id }, Adatok: {Data}, Összesen: {Total}, Elviteles: {IsTakeaway}";
+        }
     }
 }

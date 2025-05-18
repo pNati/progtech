@@ -1,15 +1,14 @@
 ﻿<Window x:Class="WpfBurgerApp.Views.Thank"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Fizetés" Height="200" Width="300">
-
-    <Grid Margin="20">
-
-
-
-        <TextBox TextWrapping="Wrap" Text="Köszönjük, hogy minket választott!" Margin="32,24,32,99"/>
-        <TextBox TextWrapping="Wrap" Text="Hamarosan átveheti a rendelését:" Margin="32,59,32,66"/>
-        <Button Content="Új rendelés" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" Background="Gold" Click="New_Click"/>
-
+        Title="Fizetés" Height="400" Width="400">
+    <Grid Margin="60 30 60 30">
+        <StackPanel>
+            <Image Source="../Images/bigburger.png" Width="60" Height="60" />
+            <Label Padding="0" Margin="0 0 0 5" Content="BurgerApp" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <Label Padding="0" Margin="0 0 0 40" Content="Köszönjük, hogy minket választott!" FontSize="12" HorizontalAlignment="Center" Foreground="{DynamicResource {x:Static SystemColors.InfoTextBrushKey}}" FontWeight="Medium"/>
+            <Label x:Name="ordersCountLabel" Content="Rendelési azonosító: 0" HorizontalAlignment="Center" Margin="0 0 0 20" FontSize="18" FontWeight="Bold"/>
+            <Button Content="Új rendelés létrehozása" Height="50" Click="New_Click" HorizontalAlignment="Stretch" Background="gold"/>
+        </StackPanel>
     </Grid>
 </Window>

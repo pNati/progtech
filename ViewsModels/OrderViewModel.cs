@@ -5,6 +5,7 @@ using WpfBurgerApp.Commands;
 using WpfBurgerApp.Services;
 using WpfBurgerApp.Models;
 using System.Windows;
+using WpfBurgerApp.Decorator;
 
 namespace WpfBurgerApp.ViewModels
 {
@@ -17,19 +18,22 @@ namespace WpfBurgerApp.ViewModels
         public OrderViewModel(OrderService orderService, Action nextView)
         {
             SubmitOrderCommand = new RelayCommand(_ => {
-
-                var order = new Order
-                {
-                    IsTakeaway = AppState.isTakeaway,
-                    UserId = AppState.User.Id,
-                    OrderedAt = DateTime.Now
-                };
-
                 try
                 {
-                    orderService.PlaceOrder(order);
-                    MessageBox.Show("Sikeres rendelés.");
-                    nextView();
+                    Order order = AppState.Order.GetBaseOrder();
+                    Order? ujOrder = orderService.PlaceOrder(order);
+
+                    if (ujOrder != null)
+                    {
+                        MessageBox.Show("Sikeres rendelés: ");
+                        AppState.Order = ujOrder;
+                        //AppState.nextOrderId = ujOrder.Id;
+                        nextView();
+                    }
+                    else {
+                        MessageBox.Show("Sikertelen rendelés.");
+                    }
+                   
                 }
                 catch (Exception e) {
                     MessageBox.Show("Sikertelen rendelés.");

@@ -36,7 +36,7 @@
             <Button Content="Fizetés"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Center"
-                Click="Pay_Click"
+                Command="{Binding SubmitOrderCommand}" 
                 Height="50" 
                 Background="Green"
                 />
