@@ -3,7 +3,7 @@ using WpfBurgerApp.Models;
 
 namespace WpfBurgerApp.Services
 {
-    public class OrderService
+    public class OrderService : IOrderService
     {
         private readonly OrderRepository _orderRepo;
         public OrderService(OrderRepository repo) => _orderRepo = repo;

@@ -15,19 +15,21 @@ namespace WpfBurgerApp.ViewModels
 
         public ICommand SubmitOrderCommand { get; }
 
+        private readonly IOrderService relOrderService;
         public OrderViewModel(OrderService orderService, Action nextView)
         {
+            relOrderService = new OrderProxy(orderService);
+
             SubmitOrderCommand = new RelayCommand(_ => {
                 try
                 {
                     Order order = AppState.Order.GetBaseOrder();
-                    Order? ujOrder = orderService.PlaceOrder(order);
+                    Order? ujOrder = relOrderService.PlaceOrder(order);
 
                     if (ujOrder != null)
                     {
-                        MessageBox.Show("Sikeres rendelés: ");
+                        MessageBox.Show("Sikeres rendelés:");
                         AppState.Order = ujOrder;
-                        //AppState.nextOrderId = ujOrder.Id;
                         nextView();
                     }
                     else {
